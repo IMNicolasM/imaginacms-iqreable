@@ -19,10 +19,13 @@ class CreateIqreableQrsTable extends Migration
       $table->text('content');
       $table->string('entity_type')->nullable();
       $table->integer('entity_id')->unsigned()->nullable();
+      $table->string('zone')->nullable();
       $table->longText('base_64');
       // Audit fields
       $table->timestamps();
       $table->auditStamps();
+      // Unique key constraint on entity_type, entity_id, and zone
+      $table->unique(['entity_type', 'entity_id', 'zone']);
     });
   }
 

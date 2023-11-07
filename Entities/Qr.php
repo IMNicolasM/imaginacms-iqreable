@@ -27,5 +27,5 @@ class Qr extends CrudModel
     'deleted' => []
   ];
   public $translatedAttributes = ['title'];
-  protected $fillable = ['content', 'entity_type', 'entity_id', 'base_64'];
+  protected $fillable = ['content', 'entity_type', 'entity_id', 'zone', 'base_64'];
 }
