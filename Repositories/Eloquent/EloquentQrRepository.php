@@ -4,6 +4,7 @@ namespace Modules\Iqreable\Repositories\Eloquent;
 
 use Modules\Iqreable\Repositories\QrRepository;
 use Modules\Core\Icrud\Repositories\Eloquent\EloquentCrudRepository;
+use Modules\Iqreable\Services\QrService;
 
 class EloquentQrRepository extends EloquentCrudRepository implements QrRepository
 {
@@ -65,5 +66,18 @@ class EloquentQrRepository extends EloquentCrudRepository implements QrRepositor
 
     //Response
     return $model;
+  }
+
+  /**
+   * Before create
+   *
+   * @param $data
+   * @return void
+   */
+  public function beforeCreate(&$data)
+  {
+    $service = new QrService();
+    $qrBase64 = $service->generate($data['content']);
+    $data['base_64'] = $qrBase64;
   }
 }

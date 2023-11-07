@@ -19,7 +19,7 @@ class CreateIqreableQrsTable extends Migration
       $table->text('content');
       $table->string('entity_type')->nullable();
       $table->integer('entity_id')->unsigned()->nullable();
-      $table->longText('code');
+      $table->longText('base_64');
       // Audit fields
       $table->timestamps();
       $table->auditStamps();
