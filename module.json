@@ -1,0 +1,16 @@
+{
+    "name": "Iqreable",
+    "alias": "iqreable",
+    "version": "1.0.0",
+	"description": "",
+    "keywords": [],
+    "priority": 1,
+    "providers": [
+        "Modules\\Iqreable\\Providers\\IqreableServiceProvider",
+        "Modules\\Iqreable\\Providers\\EventServiceProvider",
+        "Modules\\Iqreable\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
