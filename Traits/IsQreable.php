@@ -20,6 +20,6 @@ trait IsQreable
   }
   public function qr()
   {
-    return $this->hasMany('Modules\Iqreable\Entities\Qr', 'entity');
+    return $this->morphMany('Modules\Iqreable\Entities\Qr', 'entity');
   }
 }
