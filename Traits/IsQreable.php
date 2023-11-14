@@ -13,7 +13,7 @@ trait IsQreable
       'content' => $this->url,
       'entity_type' => $this->entity,
       'entity_id' => $this->id,
-      'zone' => $params['zone'] ?? 'mainqr'
+      'zone' => $params['zone'] ?? 'mainqr' ?? 'ess'
     ];
     //Create and return the Qr
     return $QrRepository->create($data);
