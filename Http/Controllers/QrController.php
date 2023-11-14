@@ -14,7 +14,7 @@ class QrController extends BasePublicController
     $modelQr = Qr::where('id', $qrId)->first();
 
     if($modelQr) {
-      return redirect()->to($modelQr->content);
+      return redirect()->away($modelQr->content);
     } else {
       return abort(404);
     }
