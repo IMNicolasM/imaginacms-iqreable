@@ -76,8 +76,21 @@ class EloquentQrRepository extends EloquentCrudRepository implements QrRepositor
    */
   public function beforeCreate(&$data)
   {
+    if(!isset($data['base_64'])) $data['base_64'] = '';
+  }
+
+  /**
+   * After create
+   *
+   * @param $model, $data
+   * @return void
+   */
+  public function afterCreate(&$model, &$data)
+  {
+    $url = route('qr.public.redirect', ['qrId' => $model->id]);
     $service = new QrService();
-    $qrBase64 = $service->generate($data['content']);
+    $qrBase64 = $service->generate($url);
     $data['base_64'] = $qrBase64;
+    $model->update(['base_64' => $qrBase64]);
   }
 }
