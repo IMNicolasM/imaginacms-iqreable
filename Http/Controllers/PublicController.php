@@ -7,7 +7,7 @@ use Modules\Core\Http\Controllers\BasePublicController;
 use Illuminate\Http\Request;
 use Modules\Iqreable\Entities\Qr;
 
-class QrController extends BasePublicController
+class PublicController extends BasePublicController
 {
   public function redirectToContentQR (Request $request, $qrId)
   {
