@@ -18,7 +18,8 @@ trait IsQreable
     //Create and return the Qr
     return $QrRepository->create($data);
   }
-  public function qr()
+
+  public function qrs()
   {
     return $this->morphMany('Modules\Iqreable\Entities\Qr', 'entity');
   }
