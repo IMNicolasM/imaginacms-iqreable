@@ -7,6 +7,9 @@ return [
         'download' => 'Download QR code',
         'update' => 'Update QR code',
         "createQr" => "Generate a QR code",
+        "openMobile" => "Open on mobile device",
+        "scanQrCodeWithCamera" => "Scan the QR code using your mobile camera to access the link",
+        "openNewTab" => "Open in new Tab",
     ],
     'form' => [
       "id" => "ID",
