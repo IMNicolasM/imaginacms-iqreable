@@ -7,6 +7,9 @@ return [
         'download' => 'Descargar codigo QR',
         'update' => 'Actualizar Codigo QR',
         "createQr" => "Genera un Codigo QR",
+        "openMobile" => "Accede desde tu dispositivo móvil",
+        "scanQrCodeWithCamera" => "Escanea el código QR con la cámara de tu móvil para abrir el enlace",
+        "openNewTab" => "Abrir en una nueva pestaña",
     ],
     'form' => [
       "id" => "ID",
