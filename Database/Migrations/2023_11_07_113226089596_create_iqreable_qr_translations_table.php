@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateIqreableQrTranslationsTable extends Migration
+return new class extends Migration
 {
   /**
    * Run the migrations.
@@ -36,4 +36,4 @@ class CreateIqreableQrTranslationsTable extends Migration
     });
     Schema::dropIfExists('iqreable__qr_translations');
   }
-}
+};

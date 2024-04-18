@@ -2,7 +2,7 @@
 
 ## Install
 ```bash
-composer require imagina/iqreable=v8.x-dev
+composer require imagina/iqreable=v10.x-dev
 ```
 
 ## Enable the module

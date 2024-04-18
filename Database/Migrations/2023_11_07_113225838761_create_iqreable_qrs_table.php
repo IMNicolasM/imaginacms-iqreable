@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateIqreableQrsTable extends Migration
+return new class  extends Migration
 {
   /**
    * Run the migrations.
@@ -38,4 +38,4 @@ class CreateIqreableQrsTable extends Migration
   {
     Schema::dropIfExists('iqreable__qrs');
   }
-}
+};
