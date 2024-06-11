@@ -8,12 +8,17 @@ class CreateQrRequest extends BaseFormRequest
 {
     public function rules()
     {
-        return [];
+        return [
+          'content' => 'required|min:2',
+          'zone' => 'required|min:2',
+        ];
     }
 
     public function translationRules()
     {
-        return [];
+        return [
+          'title' => 'required|min:2'
+        ];
     }
 
     public function authorize()
@@ -23,16 +28,24 @@ class CreateQrRequest extends BaseFormRequest
 
     public function messages()
     {
-        return [];
+        return [
+          'content.required' => trans('iqreable::qrs.validation.required'),
+          'content.min:2' => trans('iqreable::qrs.validation.min2characters'),
+          'zone.required' => trans('iqreable::qrs.validation.required'),
+          'zone.min:2' => trans('iqreable::qrs.validation.min2characters'),
+        ];
     }
 
     public function translationMessages()
     {
-        return [];
+        return [
+          'title.required' => trans('iqreable::qrs.validation.required'),
+          'title.min:2' => trans('iqreable::qrs.validation.min2characters'),
+        ];
     }
 
     public function getValidator(){
         return $this->getValidatorInstance();
     }
-    
+
 }

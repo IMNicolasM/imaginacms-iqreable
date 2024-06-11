@@ -20,18 +20,18 @@ return [
   'messages' => [
   ],
   'validation' => [
-    'required' => "Required field",
-    'min2characters' => "Minimimun 2 characteres"
+    'required' => "Campo Requerido",
+    'min2characters' => "Mínimo 2 caracteres"
   ],
   'settings' => [
     'color' => 'Color',
-    'style' => 'Style',
-    'eyeColor' => 'Eye Color',
-    'eyeStyle' => 'Eye Style',
-    'square' => 'Square',
-    'dot' => 'Dot',
-    'round' => 'Round',
-    'circle' => 'Circle',
-    'size' => 'Size (px)'
+    'style' => 'Estilo',
+    'eyeColor' => 'Color de Ojos',
+    'eyeStyle' => 'Estilo de Ojos',
+    'square' => 'Cuadrado',
+    'dot' => 'Puntos',
+    'round' => 'Redondo',
+    'circle' => 'Circulo',
+    'size' => 'Tamaño (px)'
   ]
 ];

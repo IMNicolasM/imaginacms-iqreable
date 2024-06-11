@@ -13,9 +13,9 @@ class Qr extends CrudModel
   public $transformer = 'Modules\Iqreable\Transformers\QrTransformer';
   public $repository = 'Modules\Iqreable\Repositories\QrRepository';
   public $requestValidation = [
-      'create' => 'Modules\Iqreable\Http\Requests\CreateQrRequest',
-      'update' => 'Modules\Iqreable\Http\Requests\UpdateQrRequest',
-    ];
+    'create' => 'Modules\Iqreable\Http\Requests\CreateQrRequest',
+    'update' => 'Modules\Iqreable\Http\Requests\UpdateQrRequest',
+  ];
   //Instance external/internal events to dispatch with extraData
   public $dispatchesEventsWithBindings = [
     //eg. ['path' => 'path/module/event', 'extraData' => [/*...optional*/]]
@@ -26,6 +26,6 @@ class Qr extends CrudModel
     'deleting' => [],
     'deleted' => []
   ];
-  public $translatedAttributes = [];
-  protected $fillable = [];
+  public $translatedAttributes = ['title'];
+  protected $fillable = ['content', 'entity_type', 'entity_id', 'zone', 'base_64'];
 }
